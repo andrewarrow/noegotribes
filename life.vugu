@@ -1,122 +1,25 @@
 <div>
-<div class="row">
-        <div class="col">
+        <div class="row">
+                <div class="col">
+                        0
+                </div>
+                <div class="col">
+                        meditation
+                </div>
+                <div class="col">
+                        <a href="/">Logout</a>
+                </div>
         </div>
-        <div class="col">
-                meditation
-        </div>
-        <div class="col">
-        </div>
-</div>
-<div class="row">
-
-<div class="col">
-        exercise<br/>
-        healthy diet<br/>
-        boring work<br/>
-        helping others<br/>
-        negative emotions<br/>
-        pain<br/>
-</div>
-<div class="col">
-        |<br/>
-        |<br/>
-        |<br/>
-        |<br/>
-        |<br/>
-        |<br/>
-        |<br/>
-        |<br/>
-        |<br/>
-<div class="row">
-<div class="col">
-
-  <img src="/assets/storm.png" height="100" :style='"position: relative; left: "+c.StormXtoS()+"px;"'/>
-</div>
-<div class="col">
-        <div :style='"position: relative; left: "+c.XtoS()+"px;"'>
-        <img src="/assets/person.png" height="100" style="position: relative; left: -100px;"/><br/>
-	<span style="color: white; position: relative; left: -100px; top: -50px;" vg-content="c.X"></span>
-        </div>
-</div>
-</div>
-        |<br/>
-        |<br/>
-        |<br/>
-        |<br/>
-        |<br/>
-        |<br/>
-        |<br/>
-        |<br/>
-</div>
-<div class="col">
-        resting<br/>
-        fat,sugar,animals,junk food<br/>
-        fun work<br/>
-        helping yourself<br/>
-        positive emotions<br/>
-        pleasure<br/>
-
-</div>
-</div>
-<div class="row">
-        <div class="col">
-             <button @click="event.PreventDefault(); c.moveTowards(event);">Move Towards</button>
-        </div>
-        <div class="col">
-             <button @click="event.PreventDefault();">Stay Where You Are</button>
-        </div>
-        <div class="col">
-             <button @click="event.PreventDefault(); c.moveAway(event);">Move Away</button>
-        </div>
-</div>
-<div class="row">
-        <div class="col" style="font-size: 24px;">
-                <br/>
-                <br/>
-                <span style="font-weight: bold; font-style: italic;">Easy Street</span> does not exist!
-</div>
-</div>
 </div>
 
 <script type="application/x-go">
 
 type Life struct {
-    HideWelcome bool `vugu:"data"`
-    ShowStep1 bool   `vugu:"data"`
-    ShowPerson bool   `vugu:"data"`
-    X int
     StormX int
 }
 
 func (c *Life) Init(ctx vugu.InitCtx) {
   c.StormX = -100
-}
-
-func (c *Life) moveTowards(e vugu.DOMEvent) {
-  c.X--
-  if c.X == -101 {
-    c.X = -100
-  }
-  if c.StormX > 0 {
-    c.StormX--
-  }
-}
-func (c *Life) moveAway(e vugu.DOMEvent) {
-  c.X++
-  if c.X > 100 {
-    c.StormX++
-  }
-  if c.X > 150 {
-    c.StormX+=2
-  }
-}
-
-func (c *Life) XtoS() string {
-  return fmt.Sprintf("%d", c.X)
-}
-func (c *Life) StormXtoS() string {
-  return fmt.Sprintf("%d", c.StormX)
 }
     
 </script>

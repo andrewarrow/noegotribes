@@ -1,7 +1,7 @@
 <div>
     <main role="main" class="container text-center">
 
-         <div class="mt-5" >
+         <div class="mt-5" vg-if="!c.LoggedIn">
 
             <img src="/assets/logo.png" height="60" style="border: 1px solid black;"/>
             <h1>No Ego Tribes!</h1>
@@ -13,8 +13,11 @@
             Welcome to door number 3.
             </p>
             <p>
-             <button @click="event.PreventDefault();">Login</button>
+             <button @click="event.PreventDefault(); c.LoggedIn=true;">Login</button>
             </p>
+        </div>
+        <div class="mt-5" vg-if="c.LoggedIn">
+           <main:Life></main:Life>
         </div>
 
     </main>
@@ -23,10 +26,7 @@
 <script type="application/x-go">
 
 type Root struct {
-    HideWelcome bool `vugu:"data"`
-    ShowStep1 bool   `vugu:"data"`
-    ShowPerson bool   `vugu:"data"`
-    Life bool   `vugu:"data"`
+    LoggedIn bool `vugu:"data"`
 }
     
 </script>
