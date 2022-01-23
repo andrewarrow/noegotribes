@@ -1,0 +1,32 @@
+<div>
+    <main role="main" class="container text-center">
+
+         <div class="mt-5" >
+
+            <img src="/assets/logo.png" height="60" style="border: 1px solid black;"/>
+            <h1>No Ego Tribes!</h1>
+            <p>
+            <a href="https://www.youtube.com/watch?v=p4NlLuNj0v8">This podcast</a> has Daniel Schmachtenberger 
+                    and Aubrey Marcus talking about door number 3. 
+            </p>
+            <p>
+            Welcome to door number 3.
+            </p>
+            <p>
+             <button @click="event.PreventDefault();">Login</button>
+            </p>
+        </div>
+
+    </main>
+</div>
+
+<script type="application/x-go">
+
+type Root struct {
+    HideWelcome bool `vugu:"data"`
+    ShowStep1 bool   `vugu:"data"`
+    ShowPerson bool   `vugu:"data"`
+    Life bool   `vugu:"data"`
+}
+    
+</script>

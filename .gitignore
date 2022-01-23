@@ -1,0 +1,6 @@
+bin
+**_vgen.go
+.vscode
+0_*
+go.sum
+.DS_Store
