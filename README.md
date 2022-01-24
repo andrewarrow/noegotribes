@@ -1,5 +1,8 @@
 # noegotribes
 
+# Vugu
+This app is writen in the [https://www.vugu.org/](vugu) go framework!
+
 ```
 Think your nextdoor.com group of closest 100, but banding together to survive the next 50 years.
 
