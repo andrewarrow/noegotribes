@@ -160,7 +160,10 @@ func (c *Login) ToggleSaveInfo() {
 
 func (c *Login) HandleSubmit(event vugu.DOMEvent) {
 	json, _ := json.Marshal(c.ShipInfo)
-	alert := js.Global().Get("alert")
-	alert.Invoke("Success!" + string(json))
+  fmt.Println(string(json))
+  doc := js.Global().Get("document")
+  location := doc.Get("location")
+  location.Set("href", "/")
+
 }
 </script>
