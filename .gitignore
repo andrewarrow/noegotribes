@@ -1,4 +1,5 @@
 bin
+static
 **_vgen.go
 .vscode
 0_*
