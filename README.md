@@ -15,3 +15,6 @@ This podcast has Daniel Schmachtenberger and Aubrey Marcus talking about we need
 
 noegotribes wants to be door number 3.
 ```
+
+
+[https://noegotribes.com](https://noegotribes.com)
