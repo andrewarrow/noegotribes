@@ -3,6 +3,7 @@ package setup
 import (
 	"noegotribes/ui/pages"
 	"noegotribes/ui/state"
+
 	"github.com/vugu/vgrouter"
 	"github.com/vugu/vugu"
 )
@@ -35,13 +36,9 @@ func VuguSetup(buildEnv *vugu.BuildEnv, eventEnv vugu.EventEnv) vugu.Builder {
 		vgrouter.RouteHandlerFunc(func(rm *vgrouter.RouteMatch) {
 			root.Body = &pages.Index{}
 		}))
-	router.MustAddRouteExact("/cart",
+	router.MustAddRouteExact("/login",
 		vgrouter.RouteHandlerFunc(func(rm *vgrouter.RouteMatch) {
-			root.Body = &pages.Cart{}
-		}))
-	router.MustAddRouteExact("/checkout",
-		vgrouter.RouteHandlerFunc(func(rm *vgrouter.RouteMatch) {
-			root.Body = &pages.Checkout{}
+			root.Body = &pages.Login{}
 		}))
 	router.SetNotFound(vgrouter.RouteHandlerFunc(
 		func(rm *vgrouter.RouteMatch) {

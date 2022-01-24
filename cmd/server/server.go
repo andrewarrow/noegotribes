@@ -21,11 +21,9 @@ func main() {
 
 	tchl := handlers.NewTacoStoreAPIHandler(mem)
 	cahl := handlers.NewCartAPIHandler(mem)
-	loginHandler := handlers.NewLoginHandler(mem)
 	//fs := http.FileServer(http.Dir("/Users/aa/noegotribes.com/assets"))
 	//mux.Handle("/assets/", fs)
 	mux.Handle("/", frhl)
-	mux.Handle("/login", loginHandler)
 	mux.Handle("/api/taco-list", tchl)
 	mux.Handle("/api/cart", cahl)
 

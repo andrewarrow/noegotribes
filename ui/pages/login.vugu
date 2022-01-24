@@ -1,6 +1,6 @@
 <div class="row justify-content-center">
 	<div class="col-8 p-4 ">
-		<h3 class="my-3">Shipping Address</h3>
+		<h3 class="my-3">Launching Soon - Join our list</h3>
 		<form>
 			<div class="row">
 				<div class="col-md-6">
@@ -124,13 +124,13 @@ import (
 	js "github.com/vugu/vugu/js"
 )
 
-type Checkout struct {
+type Login struct {
 	vgrouter.NavigatorRef
 	state.CartAPIRef
 	ShipInfo	memstore.Address	`vugu:"data"`
 }
 
-func (c *Checkout) Init(ctx vugu.InitCtx) {
+func (c *Login) Init(ctx vugu.InitCtx) {
 	go func() {
 		_, updated, err := c.GetCart()
 		if err != nil {
@@ -145,36 +145,36 @@ func (c *Checkout) Init(ctx vugu.InitCtx) {
 	}()
 }
 
-func (c *Checkout) HandleFirstName(event vugu.DOMEvent) {
+func (c *Login) HandleFirstName(event vugu.DOMEvent) {
 	c.ShipInfo.FirstName = event.PropString("target", "value")
 }
-func (c *Checkout) HandleLastName(event vugu.DOMEvent) {
+func (c *Login) HandleLastName(event vugu.DOMEvent) {
 	c.ShipInfo.LastName = event.PropString("target", "value")
 }
 
-func (c *Checkout) HandleAddress(event vugu.DOMEvent) {
+func (c *Login) HandleAddress(event vugu.DOMEvent) {
 	c.ShipInfo.Address = event.PropString("target", "value")
 }
-func (c *Checkout) HandleCity(event vugu.DOMEvent) {
+func (c *Login) HandleCity(event vugu.DOMEvent) {
 	c.ShipInfo.City = event.PropString("target", "value")
 }
-func (c *Checkout) HandleState(event vugu.DOMEvent) {
+func (c *Login) HandleState(event vugu.DOMEvent) {
 	c.ShipInfo.State = event.PropString("target", "value")
 }
 
-func (c *Checkout) HandlePostalCode(event vugu.DOMEvent) {
+func (c *Login) HandlePostalCode(event vugu.DOMEvent) {
 	c.ShipInfo.PostalCode = event.PropString("target", "value")
 }
 
-func (c *Checkout) HandleCountry(event vugu.DOMEvent) {
+func (c *Login) HandleCountry(event vugu.DOMEvent) {
 	c.ShipInfo.Country = event.PropString("target", "value")
 }
 
-func (c *Checkout) ToggleSaveInfo() {
+func (c *Login) ToggleSaveInfo() {
 	c.ShipInfo.SaveInfo = !c.ShipInfo.SaveInfo
 }
 
-func (c *Checkout) HandleSubmit(event vugu.DOMEvent) {
+func (c *Login) HandleSubmit(event vugu.DOMEvent) {
 	json, _ := json.Marshal(c.ShipInfo)
 	alert := js.Global().Get("alert")
 	alert.Invoke("Success!" + string(json))
