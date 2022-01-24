@@ -2,10 +2,12 @@ package main
 
 import (
 	"flag"
+	"fmt"
 	"log"
 	"net/http"
 	"noegotribes/internal/handlers"
 	"noegotribes/internal/memstore"
+	"os"
 	"path/filepath"
 )
 
@@ -25,7 +27,9 @@ func main() {
 	mux.Handle("/api/taco-list", tchl)
 	mux.Handle("/api/cart", cahl)
 
-	l := "127.0.0.1:8844"
+	port := os.Args[1]
+
+	l := fmt.Sprintf("127.0.0.1:%s", port)
 	log.Printf("Starting HTTP Server at %q", l)
 	log.Fatal(http.ListenAndServe(l, mux))
 }
