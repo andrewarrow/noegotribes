@@ -1,4 +1,5 @@
-<div class="row row-cols-1 row-cols-md-3 g-4 mt-3">
+<div>
+    <div class="row row-cols-1 row-cols-md-3 g-4 mt-3">
     <div class="col my-3">
         <div class="card h-100">
             <div class="card-body d-flex flex-column">
@@ -14,6 +15,66 @@
             </div>
         </div>
     </div>
+    <div class="col my-3">
+        <div class="card h-100">
+            <div class="card-body d-flex flex-column">
+                <h5 class="card-title">100 person tribes</h5>
+                <p class="card-text">
+                Think your nextdoor.com group of closest 100, but banding together to survive the next 50 years.
+                </p>
+                <div class='taco-footer mt-auto'>
+                    <p class='float-left'>In the next 50 years...</p>
+                    <div class='float-right'>
+                            <a href="https://vimeo.com/669572027">Watch Video</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col my-3">
+        <div class="card h-100">
+            <div class="card-body d-flex flex-column">
+                <h5 class="card-title">Share Stuff</h5>
+                <p class="card-text">
+                You can't make it on your own anymore. You have to get to know your neighbors.
+                </p>
+                <div class='taco-footer mt-auto'>
+                    <p class='float-left'>Wait for real?</p>
+                    <div class='float-right'>
+                            Yes.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<footer class="bg-light">
+
+    <div class="container">
+
+        <div class="row gutter-0">
+            <div class="col-12 col-md-6">
+                    This project is open-source
+            </div>
+            <div class="col-12 col-md-6 text-right">
+                    Find us at <a href="https://github.com/andrewarrow/noegotribes/">github.com/andrewarrow/noegotribes</a>
+            </div>
+        </div>
+
+        <div class="row mt-0 pt-2 pb-1">
+
+            <div class="col-12 col-md-2">
+                    noegotribes.com
+            </div>
+
+            <div class="col-12 col-md-4 col-lg-2 ml-auto text-md-right">Copyright (C) <span vg-html='time.Now().Year()'></span></div>
+
+        </div>
+
+    </div>
+
+</footer>
+
 </div>
 <style>
     .card-img-top {
@@ -24,6 +85,7 @@
 <script type="application/x-go">
 import (
     "log"
+    "time"
     "noegotribes/ui/state"
 )
 type Index struct {
