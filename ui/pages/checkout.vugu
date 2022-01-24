@@ -117,9 +117,9 @@
 import (
     "log"
 	"encoding/json"
-    "github.com/vugu-examples/taco-store/ui/state"
-    "github.com/vugu-examples/taco-store/ui/format"
- 	"github.com/vugu-examples/taco-store/internal/memstore"
+    "noegotribes/ui/state"
+    "noegotribes/ui/format"
+ 	"noegotribes/internal/memstore"
     "github.com/vugu/vgrouter"
 	js "github.com/vugu/vugu/js"
 )

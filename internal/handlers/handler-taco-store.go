@@ -3,7 +3,7 @@ package handlers
 import (
 	"encoding/json"
 	"github.com/julienschmidt/httprouter"
-	"github.com/vugu-examples/taco-store/internal/memstore"
+	"noegotribes/internal/memstore"
 	"net/http"
 )
 

@@ -3,8 +3,8 @@ package state
 import (
 	"errors"
 	"fmt"
-	"github.com/vugu-examples/taco-store/internal/memstore"
-	"github.com/vugu-examples/taco-store/ui/format"
+	"noegotribes/internal/memstore"
+	"noegotribes/ui/format"
 	"golang.org/x/sync/singleflight"
 	"log"
 	"net/http"

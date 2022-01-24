@@ -5,7 +5,7 @@ package main
 import (
 	"flag"
 	"fmt"
-	"github.com/vugu-examples/taco-store/wasm/index/setup"
+	"noegotribes/wasm/index/setup"
 	"github.com/vugu/vugu"
 	"github.com/vugu/vugu/domrender"
 )

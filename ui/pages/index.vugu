@@ -24,7 +24,7 @@
 <script type="application/x-go">
 import (
     "log"
-    "github.com/vugu-examples/taco-store/ui/state"
+    "noegotribes/ui/state"
 )
 type Index struct {
 	state.TacoListAPIRef

@@ -77,8 +77,8 @@
 <script type="application/x-go">
 import (
     "log"
-    "github.com/vugu-examples/taco-store/ui/state"
-    "github.com/vugu-examples/taco-store/ui/format"
+    "noegotribes/ui/state"
+    "noegotribes/ui/format"
     "github.com/vugu/vgrouter"
 )
 type TopNav struct {

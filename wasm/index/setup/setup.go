@@ -1,8 +1,8 @@
 package setup
 
 import (
-	"github.com/vugu-examples/taco-store/ui/pages"
-	"github.com/vugu-examples/taco-store/ui/state"
+	"noegotribes/ui/pages"
+	"noegotribes/ui/state"
 	"github.com/vugu/vgrouter"
 	"github.com/vugu/vugu"
 )

@@ -2,8 +2,8 @@ package main
 
 import (
 	"flag"
-	"github.com/vugu-examples/taco-store/internal/handlers"
-	"github.com/vugu-examples/taco-store/internal/memstore"
+	"noegotribes/internal/handlers"
+	"noegotribes/internal/memstore"
 	"log"
 	"net/http"
 	"path/filepath"

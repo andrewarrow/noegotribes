@@ -6,7 +6,7 @@
 </div>
 
 <script type="application/x-go">
-import "github.com/vugu-examples/taco-store/ui/comps"
+import "noegotribes/ui/comps"
 
 
 type Root struct {
