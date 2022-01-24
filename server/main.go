@@ -40,7 +40,7 @@ func main() {
 	case *build:
 		chdirToGomod()
 		// err := staticGenerate("./dist")
-		err := staticGenerate("../vugu.github.io")
+		err := staticGenerate("../site")
 		if err != nil {
 			panic(err)
 		}
