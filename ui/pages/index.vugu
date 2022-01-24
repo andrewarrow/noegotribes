@@ -8,7 +8,7 @@
                 <div class='taco-footer mt-auto'>
                     <p class='float-left' vg-content='format.Currency(item.Price)'></p>
                     <div class='float-right'>
-                        <button class="btn btn-warning" @click='c.AddCartItem(event,index)'>Add to Cart</button>
+                            right
                     </div>
                 </div>
             </div>
