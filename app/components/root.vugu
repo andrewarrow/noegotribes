@@ -143,7 +143,7 @@ if (wasmSupported) {
 
 <script type="application/x-go">
 
-import "github.com/vugu/vugu-site/app/state"
+import "noegotribes/app/state"
 
 type Root struct {
     Hero vugu.Builder // below header but above Body

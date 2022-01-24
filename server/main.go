@@ -15,10 +15,11 @@ import (
 
 	"github.com/vugu/vgrouter"
 
+	"noegotribes/app"
+	"noegotribes/app/pages"
+
 	"github.com/d0sbit/werr"
 	"github.com/vugu/vugu"
-	"github.com/vugu/vugu-site/app"
-	"github.com/vugu/vugu-site/app/pages"
 	"github.com/vugu/vugu/staticrender"
 )
 

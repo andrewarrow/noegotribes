@@ -1,11 +1,12 @@
 package app
 
 import (
+	"noegotribes/app/components"
+	"noegotribes/app/pages"
+	"noegotribes/app/state"
+
 	"github.com/vugu/vgrouter"
 	"github.com/vugu/vugu"
-	"github.com/vugu/vugu-site/app/components"
-	"github.com/vugu/vugu-site/app/pages"
-	"github.com/vugu/vugu-site/app/state"
 )
 
 type VuguSetupOptions struct {

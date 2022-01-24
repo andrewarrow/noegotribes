@@ -611,7 +611,7 @@ type MySlottedComp struct {
 
 <script type="application/x-go">
 
-import "github.com/vugu/vugu-site/app/codefmt"
+import "noegotribes/app/codefmt"
 
 type Components struct {}
 

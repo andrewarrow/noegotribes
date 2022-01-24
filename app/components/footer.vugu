@@ -34,7 +34,7 @@
 
 //import "log"
 import "time"
-import "github.com/vugu/vugu-site/app/state"
+import "noegotribes/app/state"
 
 type Footer struct {
     state.PageInfoRef

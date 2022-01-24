@@ -22,7 +22,7 @@
 <script type="application/x-go">
 
 //import "log"
-import "github.com/vugu/vugu-site/app/state"
+import "noegotribes/app/state"
 
 type DocSidebar struct {
     state.PageInfoRef

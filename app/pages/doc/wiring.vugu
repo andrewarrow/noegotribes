@@ -117,7 +117,7 @@ type DemoComp1 struct {
 
 <script type="application/x-go">
 
-import "github.com/vugu/vugu-site/app/codefmt"
+import "noegotribes/app/codefmt"
 
 type Wiring struct {}
 

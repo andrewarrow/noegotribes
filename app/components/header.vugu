@@ -44,7 +44,7 @@
 
 import "strings"
 
-import "github.com/vugu/vugu-site/app/state"
+import "noegotribes/app/state"
 
 type Header struct {
     state.PageInfoRef

@@ -10,7 +10,7 @@ import (
 	"github.com/vugu/vugu"
 	"github.com/vugu/vugu/domrender"
 
-	"github.com/vugu/vugu-site/app"
+	"noegotribes/app"
 )
 
 func main() {
