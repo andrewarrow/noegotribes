@@ -54,32 +54,8 @@
                 &nbsp; <br/> &nbsp; <br/> &nbsp; <br/>
                 &nbsp; <br/> &nbsp; <br/> &nbsp; <br/>
         </div>
-<footer class="bg-light">
 
-    <div class="container">
-
-        <div class="row gutter-0">
-            <div class="col-12 col-md-6">
-                    This project is open-source
-            </div>
-            <div class="col-12 col-md-6 text-right">
-                    noegotribes.com
-            </div>
-        </div>
-
-        <div class="row mt-0 pt-2 pb-1">
-
-            <div class="col-12 col-md-2">
-                    Find us at <a href="https://github.com/andrewarrow/noegotribes/">github</a>
-            </div>
-
-            <div class="col-12 col-md-4 col-lg-2 ml-auto text-md-right">Copyright (C) <span vg-html='time.Now().Year()'></span></div>
-
-        </div>
-
-    </div>
-
-</footer>
+        <pages:Footer></pages:Footer>
 
 </div>
 <style>

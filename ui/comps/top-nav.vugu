@@ -6,7 +6,7 @@
                 <strong>No Ego Tribes</strong>
             </a>
             <div class="d-flex cart-hover">
-                    <a href="#">Login</a>
+                    <a href="/login">Login / Register</a>
             </div>
         </div>
     </nav>
