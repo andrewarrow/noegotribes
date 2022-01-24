@@ -1,14 +1,14 @@
 <div class="row row-cols-1 row-cols-md-3 g-4 mt-3">
-    <div vg-for='index, item := range c.TacoList' class="col my-3">
+    <div class="col my-3">
         <div class="card h-100">
-            <img :src="item.ImageUrl" class="card-img-top" alt="...">
             <div class="card-body d-flex flex-column">
-                <h5 vg-content='item.Title' class="card-title"></h5>
-                <p vg-content='item.Description' class="card-text"></p>
+                <h5 class="card-title"><a href="https://www.youtube.com/watch?v=p4NlLuNj0v8">This podcast</a></h5>
+                <p class="card-text">has Daniel Schmachtenberger
+                    and Aubrey Marcus talking about door number 3.</p>
                 <div class='taco-footer mt-auto'>
-                    <p class='float-left' vg-content='format.Currency(item.Price)'></p>
+                    <p class='float-left'>Welcome to</p>
                     <div class='float-right'>
-                            right
+                            Door3!
                     </div>
                 </div>
             </div>

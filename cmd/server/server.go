@@ -2,10 +2,10 @@ package main
 
 import (
 	"flag"
-	"noegotribes/internal/handlers"
-	"noegotribes/internal/memstore"
 	"log"
 	"net/http"
+	"noegotribes/internal/handlers"
+	"noegotribes/internal/memstore"
 	"path/filepath"
 )
 
@@ -19,6 +19,8 @@ func main() {
 
 	tchl := handlers.NewTacoStoreAPIHandler(mem)
 	cahl := handlers.NewCartAPIHandler(mem)
+	//fs := http.FileServer(http.Dir("/Users/aa/noegotribes.com/assets"))
+	//mux.Handle("/assets/", fs)
 	mux.Handle("/", frhl)
 	mux.Handle("/api/taco-list", tchl)
 	mux.Handle("/api/cart", cahl)

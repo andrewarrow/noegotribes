@@ -2,10 +2,11 @@
     <nav class="navbar navbar-light bg-light">
         <div class="container-fluid">
             <a class="navbar-brand btn" @click='c.Navigate("/", nil)'>
+                <img src="https://i.ibb.co/mCyDQvg/logo.png" height="60" style="border: 1px solid black;"/>
                 <strong>No Ego Tribes</strong>
             </a>
             <div class="d-flex cart-hover">
-                    right
+                    <a href="#">Login</a>
             </div>
         </div>
     </nav>
