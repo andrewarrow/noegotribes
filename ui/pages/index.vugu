@@ -48,6 +48,12 @@
         </div>
     </div>
 </div>
+        <div class="row gutter-0">
+                &nbsp; <br/> &nbsp; <br/> &nbsp; <br/>
+                &nbsp; <br/> &nbsp; <br/> &nbsp; <br/>
+                &nbsp; <br/> &nbsp; <br/> &nbsp; <br/>
+                &nbsp; <br/> &nbsp; <br/> &nbsp; <br/>
+        </div>
 <footer class="bg-light">
 
     <div class="container">
@@ -57,14 +63,14 @@
                     This project is open-source
             </div>
             <div class="col-12 col-md-6 text-right">
-                    Find us at <a href="https://github.com/andrewarrow/noegotribes/">github.com/andrewarrow/noegotribes</a>
+                    noegotribes.com
             </div>
         </div>
 
         <div class="row mt-0 pt-2 pb-1">
 
             <div class="col-12 col-md-2">
-                    noegotribes.com
+                    Find us at <a href="https://github.com/andrewarrow/noegotribes/">github</a>
             </div>
 
             <div class="col-12 col-md-4 col-lg-2 ml-auto text-md-right">Copyright (C) <span vg-html='time.Now().Year()'></span></div>
