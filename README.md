@@ -11,7 +11,7 @@ This app is writen in the [vugu](https://www.vugu.org/) go framework!
 ```
 
 # About
-Think your nextdoor.com group of closest 100, but banding together to survive the next 50 years.
+Think your closest 100 neighbors, but banding together to survive the next 50 years.
 
 In the next 50 years...
 
