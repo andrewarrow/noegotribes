@@ -22,7 +22,7 @@
 				<div class="col-md-12">
 					<div class="form-group mb-4">
 						<label class="ml-1 mb-2">Email Address</label>
-						<input @change='c.HandleAddress(event)' type="text" placeholder="Email Address"
+						<input @change='c.HandleEmail(event)' type="text" placeholder="Email Address"
 								class="form-control border-input">
 					</div>
 				</div>
@@ -63,7 +63,7 @@
 				<div class="col-md-6">
 					<div class="form-group mb-4">
 						<label class="ml-1 mb-2 ">Country </label>
-						<input @change='c.HandlePostalCode(event)' type="text" placeholder="Country"
+						<input @change='c.HandleCountry(event)' type="text" placeholder="Country"
 								class="form-control border-input">
 					</div>
 				</div>
@@ -127,9 +127,15 @@ func (c *Login) HandleLastName(event vugu.DOMEvent) {
 func (c *Login) HandleAddress(event vugu.DOMEvent) {
 	c.ShipInfo.Address = event.PropString("target", "value")
 }
+
+func (c *Login) HandleEmail(event vugu.DOMEvent) {
+	c.ShipInfo.Email = event.PropString("target", "value")
+}
+
 func (c *Login) HandleCity(event vugu.DOMEvent) {
 	c.ShipInfo.City = event.PropString("target", "value")
 }
+
 func (c *Login) HandleState(event vugu.DOMEvent) {
 	c.ShipInfo.State = event.PropString("target", "value")
 }
