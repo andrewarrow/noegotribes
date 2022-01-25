@@ -20,12 +20,12 @@ func main() {
 	mem := memstore.NewMemStore()
 
 	tchl := handlers.NewTacoStoreAPIHandler(mem)
-	cahl := handlers.NewCartAPIHandler(mem)
+	login := handlers.NewLoginAPIHandler(mem)
 	//fs := http.FileServer(http.Dir("/Users/aa/noegotribes.com/assets"))
 	//mux.Handle("/assets/", fs)
 	mux.Handle("/", frhl)
 	mux.Handle("/api/taco-list", tchl)
-	mux.Handle("/api/cart", cahl)
+	mux.Handle("/api/login", login)
 
 	port := os.Args[1]
 

@@ -72,7 +72,7 @@ import (
 )
 type Index struct {
 	state.TacoListAPIRef
-	state.CartAPIRef
+	state.LoginAPIRef
 }
 
 func (c *Index) Init(ctx vugu.InitCtx) {
@@ -90,20 +90,4 @@ func (c *Index) Init(ctx vugu.InitCtx) {
 	}()
 }
 
-func (c *Index) AddCartItem(event vugu.DOMEvent, index int) {
-	ee := event.EventEnv()
-	go func() {
-		err := c.PostCartItem(c.TacoList[index])
-		if err != nil {
-			ee.Lock()
-			log.Printf("error adding cart item: %v", err)
-
-			ee.UnlockRender()
-			return
-		}
-		ee.Lock()
-		c.Cart = append(c.Cart, c.TacoList[index])
-		ee.UnlockRender()
-	}()
-}
 </script>

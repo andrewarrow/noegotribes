@@ -110,23 +110,11 @@ import (
 
 type Login struct {
 	vgrouter.NavigatorRef
-	state.CartAPIRef
+	state.LoginAPIRef
 	ShipInfo	memstore.Address	`vugu:"data"`
 }
 
 func (c *Login) Init(ctx vugu.InitCtx) {
-	go func() {
-		_, updated, err := c.GetCart()
-		if err != nil {
-			log.Printf("error getting Cart items: %v", err)
-			return
-		}
-
-		if updated {
-			ctx.EventEnv().Lock()
-			ctx.EventEnv().UnlockRender()
-		}
-	}()
 }
 
 func (c *Login) HandleFirstName(event vugu.DOMEvent) {
@@ -161,9 +149,20 @@ func (c *Login) ToggleSaveInfo() {
 func (c *Login) HandleSubmit(event vugu.DOMEvent) {
 	json, _ := json.Marshal(c.ShipInfo)
   fmt.Println(string(json))
-  doc := js.Global().Get("document")
-  location := doc.Get("location")
-  location.Set("href", "/")
+	ee := event.EventEnv()
+	go func() {
+		err := c.PostLoginItem()
+		if err != nil {
+			ee.Lock()
+			log.Printf("error adding cart item: %v", err)
+
+			ee.UnlockRender()
+			return
+		}
+    doc := js.Global().Get("document")
+    location := doc.Get("location")
+    location.Set("href", "/")
+	}()
 
 }
 </script>
