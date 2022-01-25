@@ -3,9 +3,10 @@ package handlers
 import (
 	"encoding/json"
 	"fmt"
-	"io/ioutil"
+	"log"
 	"net/http"
 	"noegotribes/internal/memstore"
+	"os"
 
 	"github.com/julienschmidt/httprouter"
 )
@@ -28,8 +29,20 @@ func NewLoginAPIHandler(mem *memstore.MemStore) *LoginAPIHandler {
 }
 
 func (h *LoginAPIHandler) PostLoginItem(w http.ResponseWriter, r *http.Request, params httprouter.Params) {
-	var tx interface{}
-	all, _ := ioutil.ReadAll(r.Body)
-	json.Unmarshal(all, &tx)
-	fmt.Println("Tx", tx)
+	var q memstore.Address
+	err := json.NewDecoder(r.Body).Decode(&q)
+	if err != nil {
+		return
+	}
+	qstring := fmt.Sprintf("%+v", q)
+
+	f, err := os.OpenFile("address.log",
+		os.O_APPEND|os.O_CREATE|os.O_WRONLY, 0644)
+	if err != nil {
+		log.Println(err)
+	}
+	defer f.Close()
+	if _, err := f.WriteString(qstring); err != nil {
+		log.Println(err)
+	}
 }
