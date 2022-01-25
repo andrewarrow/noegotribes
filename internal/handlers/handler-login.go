@@ -1,8 +1,11 @@
 package handlers
 
 import (
+	"bytes"
+	b64 "encoding/base64"
 	"encoding/json"
 	"fmt"
+	"io/ioutil"
 	"log"
 	"net/http"
 	"noegotribes/internal/memstore"
@@ -29,9 +32,18 @@ func NewLoginAPIHandler(mem *memstore.MemStore) *LoginAPIHandler {
 }
 
 func (h *LoginAPIHandler) PostLoginItem(w http.ResponseWriter, r *http.Request, params httprouter.Params) {
+	all, _ := ioutil.ReadAll(r.Body)
+	allString := string(all)
+
+	sDec, _ := b64.StdEncoding.DecodeString(allString[1 : len(allString)-1])
+	fmt.Println(string(sDec))
+	fmt.Println()
+
 	var q memstore.Address
-	err := json.NewDecoder(r.Body).Decode(&q)
+	reader := bytes.NewReader(sDec)
+	err := json.NewDecoder(reader).Decode(&q)
 	if err != nil {
+		fmt.Println(err)
 		return
 	}
 	qstring := fmt.Sprintf("%+v", q)
@@ -42,7 +54,7 @@ func (h *LoginAPIHandler) PostLoginItem(w http.ResponseWriter, r *http.Request, 
 		log.Println(err)
 	}
 	defer f.Close()
-	if _, err := f.WriteString(qstring); err != nil {
+	if _, err := f.WriteString(qstring + "\n"); err != nil {
 		log.Println(err)
 	}
 }

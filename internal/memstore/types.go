@@ -8,6 +8,7 @@ type Taco struct {
 	Price       float32 `json:"price"`
 }
 
+// {"first_name":"aa","last_name":"","email":"","address":"","city":"","state":"","postal_code":"","country":"","save_info":false}
 type Address struct {
 	FirstName  string `json:"first_name"`
 	LastName   string `json:"last_name"`

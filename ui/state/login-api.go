@@ -14,10 +14,10 @@ type LoginAPI struct {
 	g     singleflight.Group
 }
 
-func (c *LoginAPI) PostLoginItem() error {
+func (c *LoginAPI) PostLoginItem(payload string) error {
 
 	url := "/api/login"
-	res, err := Post(url, "application/json", []byte{1, 2, 3, 4, 5, 6, 7})
+	res, err := Post(url, "application/json", []byte(payload))
 	if err != nil {
 		err = errors.New(fmt.Sprintf("Error PostLoginItem() %v", err))
 		return err

@@ -154,10 +154,9 @@ func (c *Login) ToggleSaveInfo() {
 
 func (c *Login) HandleSubmit(event vugu.DOMEvent) {
 	json, _ := json.Marshal(c.ShipInfo)
-  fmt.Println(string(json))
 	ee := event.EventEnv()
 	go func() {
-		err := c.PostLoginItem()
+		err := c.PostLoginItem(string(json))
 		if err != nil {
 			ee.Lock()
 			log.Printf("error adding cart item: %v", err)
