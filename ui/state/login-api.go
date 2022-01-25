@@ -17,7 +17,7 @@ type LoginAPI struct {
 func (c *LoginAPI) PostLoginItem() error {
 
 	url := "/api/login"
-	res, err := Post(url, "application/json", []byte{1, 2, 3})
+	res, err := Post(url, "application/json", []byte{1, 2, 3, 4, 5, 6, 7})
 	if err != nil {
 		err = errors.New(fmt.Sprintf("Error PostLoginItem() %v", err))
 		return err

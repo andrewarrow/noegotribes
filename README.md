@@ -28,3 +28,9 @@ noegotribes wants to be door number 3.
 # Link
 
 [https://noegotribes.com](https://noegotribes.com)
+
+# Pitch
+
+```
+How well do you know your closest 100 neighbors? Not very well right? We have all enjoyed the single family lifestyle our entire lives. But think about election night 2024. Think about this virus. Think about everything points to we are the frog in the pot and the water is finally reaching boiling. But there's nothing to do, no where to go to fix all the problems and prevent collapse. Instead we need to just start acting like certain things are gone, and form 100 person self suffient tribes. https://noegotribes.com/
+```
