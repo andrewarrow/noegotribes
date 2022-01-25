@@ -2,7 +2,8 @@
     <nav class="navbar navbar-light bg-light">
         <div class="container-fluid">
             <a class="navbar-brand btn" @click='c.Navigate("/", nil)'>
-                <img src="https://i.ibb.co/mCyDQvg/logo.png" height="60" style="border: 1px solid black;"/>
+                <img src="https://i.ibb.co/Vj8HqGX/6sq.png" height="60" style="border: 1px solid grey;"/>
+                &nbsp;
                 <strong>No Ego Tribes</strong>
             </a>
             <div class="d-flex cart-hover">
